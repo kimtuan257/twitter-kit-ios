@@ -42,8 +42,9 @@
 
 + (void)performDefaultActionForTappingHashtag:(TWTRTweetHashtagEntity *)hashtag
 {
-    NSURL *webURL = [self hashtagEntityURLString:hashtag.text];
-    NSURL *deepLinkURL = [NSURL URLWithString:[NSString stringWithFormat:@"twitter://search?query=%%23%@", hashtag.text]];
+    NSString * encodedHashTag = [hashtag.text stringByAddingPercentEncodingWithAllowedCharacters: NSCharacterSet.URLHostAllowedCharacterSet];
+    NSURL *webURL = [self hashtagEntityURLString:encodedHashTag];
+    NSURL *deepLinkURL = [NSURL URLWithString:[NSString stringWithFormat:@"twitter://search?query=%%23%@", encodedHashTag]];
 
     [self openURL:webURL deeplinkURL:deepLinkURL];
 }

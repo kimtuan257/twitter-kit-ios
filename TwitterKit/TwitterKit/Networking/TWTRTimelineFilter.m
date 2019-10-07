@@ -27,6 +27,7 @@
         self.hashtags = [NSSet setWithArray:[TWTRDictUtil twtr_arrayForKey:@"hashtags" inDict:dictionary]];
         self.handles = [NSSet setWithArray:[TWTRDictUtil twtr_arrayForKey:@"handles" inDict:dictionary]];
         self.urls = [NSSet setWithArray:[TWTRDictUtil twtr_arrayForKey:@"urls" inDict:dictionary]];
+        self.officalAccount = [TWTRDictUtil twtr_boolForKey:@"officalAccount" inDict:dictionary];
     }
     return self;
 }

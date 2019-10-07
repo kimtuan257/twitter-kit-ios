@@ -956,7 +956,7 @@
 		BFE8393E1ADF15E40035CBA1 /* TWTRTimelineType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWTRTimelineType.h; sourceTree = "<group>"; };
 		BFE839401ADF16C70035CBA1 /* TWTRConstants_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TWTRConstants_Private.h; path = "../../../Supporting Files/TWTRConstants_Private.h"; sourceTree = "<group>"; };
 		BFE839411ADF16C70035CBA1 /* TWTRConstants_Private.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TWTRConstants_Private.m; path = "../../../Supporting Files/TWTRConstants_Private.m"; sourceTree = "<group>"; };
-		BFE839601ADF23590035CBA1 /* TwitterKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TwitterKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFE839601ADF23590035CBA1 /* TwitterKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TwitterKit.framework; path = "/Users/mptv2/Project/twitter-kit-ios/TwitterKit/build/Debug-iphoneos/TwitterKit.framework"; sourceTree = "<absolute>"; };
 		DB0161981C87931500B329AD /* TWTRTweetDelegationHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWTRTweetDelegationHelper.h; sourceTree = "<group>"; };
 		DB0161991C87931500B329AD /* TWTRTweetDelegationHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWTRTweetDelegationHelper.m; sourceTree = "<group>"; };
 		DB0410601D7F20FE003274D9 /* TWTRMultiImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TWTRMultiImageViewController.h; path = TwitterKit/Social/Syndication/Controllers/TWTRMultiImageViewController.h; sourceTree = SOURCE_ROOT; };
@@ -1569,7 +1569,6 @@
 			children = (
 				A97654E518E0B29B00E25169 /* libTwitterKit.a */,
 				A966541418EB687000B61CEE /* TwitterKitTests.xctest */,
-				BFE839601ADF23590035CBA1 /* TwitterKit.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";

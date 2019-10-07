@@ -38,6 +38,7 @@
 @property (nonatomic, copy) NSSet *filteredUrls;
 @property (nonatomic, copy) NSSet *filteredHandles;
 @property (nonatomic, copy) NSSet *filteredKeywords;
+@property (nonatomic) BOOL filteredOfficalAccount;
 @property (nonatomic) NSUInteger totalFilteredTweets;
 @end
 
@@ -70,6 +71,7 @@
         self.filteredHandles = [self lowercaseSetFromStrings:self.filters.handles];
         self.filteredUrls = [self hostsSetFromStrings:self.filters.urls];
         self.filteredKeywords = [self lowercaseSetFromStrings:self.filters.keywords];
+        self.filteredOfficalAccount = self.filters.officalAccount;
 
         self.totalFilteredTweets = 0;
     }
@@ -114,6 +116,15 @@
         if (containsKeyword) {
             filteredTweetsInResponse++;
             return;  // filter out
+        }
+        
+        // filter offical account
+        if (_filteredOfficalAccount) {
+            BOOL officalUser = tweet.author.isVerified;
+            if (officalUser) {
+                filteredTweetsInResponse++;
+                return;  // filter out
+            }
         }
 
         // if we reached here, the tweet should not be filtered out

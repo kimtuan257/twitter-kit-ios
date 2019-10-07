@@ -31,6 +31,8 @@
 
 @property (nonatomic, copy, nullable) NSSet *urls;
 
+@property (nonatomic) BOOL officalAccount;
+
 - (nullable instancetype)initWithJSONDictionary:(nonnull NSDictionary *)dictionary;
 - (nonnull instancetype) new NS_UNAVAILABLE;
 

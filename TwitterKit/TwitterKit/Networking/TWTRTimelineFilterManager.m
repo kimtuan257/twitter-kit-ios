@@ -121,7 +121,7 @@
         // filter offical account
         if (_filteredOfficalAccount) {
             BOOL officalUser = tweet.author.isVerified;
-            if (officalUser) {
+            if (!officalUser) {
                 filteredTweetsInResponse++;
                 return;  // filter out
             }

@@ -56,7 +56,7 @@ extension DemoCollectionViewDataSource: UICollectionViewDataSource {
 
 extension DemoCollectionViewDataSource: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("lkcnaslknxw")
+        delegate?.demoCollectionViewDataSource(dataSource: self, didSelectDemo: demos[indexPath.row])
     }
 
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {

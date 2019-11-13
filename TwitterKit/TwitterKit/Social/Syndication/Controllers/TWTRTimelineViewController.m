@@ -138,6 +138,12 @@ static CGFloat const TWTREstimatedRowHeight = 150;
 
     self.refreshControl = [[UIRefreshControl alloc] init];
     [self.refreshControl addTarget:self action:@selector(refresh) forControlEvents:UIControlEventValueChanged];
+    
+    if (@available(iOS 10.0, *)) {
+        self.tableView.refreshControl = self.refreshControl;
+    } else {
+        [self.tableView addSubview:self.refreshControl];
+    }
 
     self.messageView = [[TWTRTimelineMessageView alloc] init];
     self.tableView.backgroundView = self.messageView;
